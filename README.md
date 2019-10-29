@@ -16,11 +16,11 @@ Two types of edge list files are supported:
 
 To partition the edge list:
 ```
-./bin/preprocess -i [input path] -o [output path] -v [vertices] -p [partitions] -t [edge type: 0=unweighted, 1=weighted]  –d [number of disks] -s [stripe depth]
+./bin/preprocess -i [input path] -o [output path] -v [vertices] -p [partitions] -t [edge type: 0=unweighted, 1=weighted]  –d [number of disks] -s [stripe depth(KB)]
 ```
-For example, we want to partition the unweighted [LiveJournal](http://snap.stanford.edu/data/soc-LiveJournal1.html) graph into a 4x4 grid:
+For example, we want to partition the unweighted [LiveJournal](http://snap.stanford.edu/data/soc-LiveJournal1.html) graph into a 36x36 grid and strip it to 4 external storage devices with a stripe depth of 6144KB.
 ```
-./bin/preprocess -i /data/LiveJournal -o /data/LiveJournal_Grid -v 4847571 -p 4 -t 0  -d 4 -s 6144
+./bin/preprocess -i /data/LiveJournal -o /data/LiveJournal_Grid -v 4847571 -p 36 -t 0  -d 4 -s 6144
 ```
 After preprocessing, the following file will be generated：
 (1) block-*-* : edge block file;
