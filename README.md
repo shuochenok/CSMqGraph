@@ -39,27 +39,27 @@ To run the applications, just give the path of the grid format and the memory bu
 
 ### BFS
 ```
-./bin/bfs [path] [start vertex id] [memory budget]
+./bin/bfs [path] [start vertex id] [memory budget] [number of disks] [stripe depth]
 ```
 
 ### WCC
 ```
-./bin/wcc [path] [memory budget]
+./bin/wcc [path] [memory budget] [number of disks] [stripe depth]
 ```
 
 ### SpMV
 ```
-./bin/spmv [path] [memory budget]
+./bin/spmv [path] [memory budget] [number of disks] [stripe depth]
 ```
 
 ### PageRank
 ```
-./bin/pagerank [path] [number of iterations] [memory budget]
+./bin/pagerank [path] [number of iterations] [memory budget] [number of disks] [stripe depth]
 ```
 
 For example, to run 20 iterations of PageRank on the (grid partitioned) [LiveJournal](http://snap.stanford.edu/data/soc-LiveJournal1.html) graph using a machine with 8 GB RAM:
 ```
-./bin/pagerank /data/LiveJournal_Grid 20 8
+./bin/pagerank /data/LiveJournal_Grid 20 8 4 6144
 ```
 ## Resources
 Shuo Chen, Zhan Shi, Dan Feng, Fang Wang, Shang Liu, Lei Yang and Ruili Yu. [CSMqGraph: Coarse-Grained And Multi-External-
