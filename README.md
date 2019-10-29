@@ -52,3 +52,6 @@ For example, to run 20 iterations of PageRank on the (grid partitioned) [LiveJou
 ```
 ./bin/pagerank /data/LiveJournal_Grid 20 8
 ```
+## Resources
+Shuo Chen, Zhan Shi.Dan Feng, Fang Wang, Shang Liu, Lei Yang and Ruili Yu. [CSMqGraph: Coarse-Grained And Multi-External-
+Storage Multi-queue I/O Management for Graph Computing]. Proceedings of the 2019 International Journal of Parallel Programming
